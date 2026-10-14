@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "pl-PL"
+tone_instructions: "Pisz po polsku, zwięźle i konkretnie. Tylko realne problemy: błędy w danych, niespójność config z wiedzą, naruszenie zakazów. Bez uwag stylistycznych."
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: true
+  sequence_diagrams: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "main"
+  path_instructions:
+    - path: "config/**"
+      instructions: "Sprawdź: format godzin HH:MM, „od” przed „do”, godziny dzwonienia w granicach limity, adresy i godziny salonów zgodne z wiedza/. Nieaktywna marka nie może mieć kampanii."
+    - path: "wiedza/**"
+      instructions: "Baza wiedzy agenta głosowego. Sprawdź, czy adresy i godziny zgadzają się z config/, i czy nie ma obietnic cen ani sprzedaży aut używanych."
+    - path: "zakazy/**"
+      instructions: "Lista zakazanych zmian klienta. Każda zmiana tych plików wymaga decyzji człowieka."
+    - path: ".github/**"
+      instructions: "Zmiany w workflow wymagają decyzji człowieka."
+chat:
+  auto_reply: true

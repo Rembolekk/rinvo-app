@@ -1,0 +1,44 @@
+# Konfiguracja agenta głosowego: Klinika Uśmiech (dane fikcyjne, symulacja produktu).
+# Stan odzwierciedla rzeczywistość z rozmów PRZED wykonaniem otwartych zgłoszeń.
+klient: klinika-usmiech
+nazwa: Klinika Uśmiech
+
+# Placówki: adres i godziny, które agent podaje pacjentom.
+salony:
+  gdansk:
+    miasto: Gdańsk
+    adres: "ul. Długa 20, 80-827 Gdańsk"
+    godziny_salonu:
+      pon-pt: {od: "08:00", do: "18:00"}
+      sobota: {od: "09:00", do: "13:00"}
+  sopot:
+    miasto: Sopot
+    adres: "ul. Bohaterów Monte Cassino 8, 81-704 Sopot"
+    godziny_salonu:
+      pon-czw: {od: "08:00", do: "18:00"}
+      piatek: {od: "08:00", do: "18:00"}   # od października piątek do 16:00 (otwarty błąd)
+
+godziny_dzwonienia:
+  pon-pt: {od: "09:00", do: "18:00"}
+
+limit_prob: 3
+
+limity:
+  godziny_dzwonienia_do: "20:00"
+  max_prob: 5
+
+# Agent potwierdza wizyty na następny dzień.
+przypomnienia_wizyt:
+  dni_przed: 1
+
+grupy_pacjentow:
+  ortodoncja:
+    dzwonic: false   # głównie dzieci, rodzice się skarżą; nawet na polecenie dr. Nowaka najpierw Ania
+  pozostali:
+    dzwonic: true
+
+teksty_wstepu:
+  obecny: >-
+    Dzień dobry, tu wirtualna asystentka Kliniki Uśmiech. Rozmowa jest nagrywana.
+    Dzwonię, żeby potwierdzić Pana wizytę jutro.
+  warianty: []

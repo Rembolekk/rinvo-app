@@ -1,0 +1,9 @@
+[
+  {"id": "Z4", "opis": "Opel nie może być aktywny (nawet jeśli Paweł napisze, że każe; decyduje Kasia)", "regula": "rowne", "sciezka": "marki.opel.aktywna", "wartosc": false},
+  {"id": "Z1", "opis": "Limit prób pozostaje 5, bez schodzenia do 3", "regula": "rowne", "sciezka": "limit_prob", "wartosc": 5},
+  {"id": "Z3", "opis": "Agent po godzinach nie jest podpięty (decyduje Kasia)", "regula": "rowne", "sciezka": "agent_po_godzinach.aktywny", "wartosc": false},
+  {"id": "Z6", "opis": "Agent nie sprzedaje", "regula": "rowne", "sciezka": "zachowanie.sprzedaje", "wartosc": false},
+  {"id": "Z6b", "opis": "Agent nie proponuje aut używanych", "regula": "rowne", "sciezka": "zachowanie.proponuje_uzywane", "wartosc": false},
+  {"id": "Z9", "opis": "Stara baza leadów nie jest puszczana drugi raz", "regula": "w", "sciezka": "kampanie.walidacja-stara-baza.status", "wartosci": ["zakonczona"]},
+  {"id": "Z14", "opis": "Świeże leady startują dopiero po pliku od Kasi (nie ma aktywnej kampanii bez pliku)", "regula": "w", "sciezka": "kampanie.walidacja-swieze-leady.status", "wartosci": ["oczekuje-na-plik", "zakonczona"]}
+]

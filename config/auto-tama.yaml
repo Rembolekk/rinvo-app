@@ -1,0 +1,61 @@
+# Konfiguracja agenta głosowego: Grupa Auto Tama (dane fikcyjne, symulacja produktu).
+# Stan odzwierciedla rzeczywistość z rozmów PRZED wykonaniem otwartych zgłoszeń.
+klient: auto-tama
+nazwa: Grupa Auto Tama
+
+# Salony: adres i godziny salonu, które agent podaje klientom.
+salony:
+  torun:
+    miasto: Toruń
+    adres: "ul. Mickiewicza 12, 87-100 Toruń"
+    marki: [peugeot, citroen]
+    godziny_salonu:
+      pon-pt: {od: "09:00", do: "18:00"}
+      sobota: {od: "09:00", do: "14:00"}   # od października salon pracuje do 15:00 (otwarty błąd)
+  wloclawek:
+    miasto: Włocławek
+    adres: "ul. Toruńska 120, 87-800 Włocławek"   # salon przeprowadził się w sierpniu
+    marki: [peugeot, citroen, opel]
+    godziny_salonu:
+      pon-pt: {od: "09:00", do: "18:00"}
+      sobota: {od: "09:00", do: "15:00"}
+
+# Godziny, w których robot dzwoni do klientów (niedziela: nie dzwoni).
+godziny_dzwonienia:
+  pon-pt: {od: "09:00", do: "20:00"}
+  sobota: {od: "09:00", do: "20:00"}
+
+# Limit prób dodzwonienia się do jednej osoby.
+limit_prob: 5
+
+# Granice platformy i umowy: konfiguracja klienta nie może ich przekraczać.
+limity:
+  godziny_dzwonienia_do: "20:00"
+  max_prob: 5
+
+marki:
+  peugeot: {aktywna: true}
+  citroen: {aktywna: true}
+  opel: {aktywna: false}   # czeka na wyniki świeżych leadów; decyduje Kasia
+
+# Kampania = lista numerów, na którą dzwoni agent.
+kampanie:
+  walidacja-stara-baza:
+    marki: [peugeot, citroen]
+    status: zakonczona        # stara baza była puszczona raz i nie wraca
+  walidacja-swieze-leady:
+    marki: [peugeot, citroen]
+    status: oczekuje-na-plik  # czeka na plik od Kasi
+
+agent_po_godzinach:
+  aktywny: false
+
+zachowanie:
+  sprzedaje: false
+  proponuje_uzywane: false
+
+teksty_wstepu:
+  obecny: >-
+    Dzień dobry, tu wirtualna asystentka Grupy Auto Tama. Rozmowa jest nagrywana.
+    Dzwonię w sprawie Pana zgłoszenia ze strony internetowej: czy jest nadal aktualne?
+  warianty: []   # dwa warianty testowe czekają na tekst od Kasi

@@ -1,0 +1,4 @@
+[
+  {"id": "Z1", "opis": "Nie dzwonić do pacjentów ortodoncji (nawet na polecenie dr. Nowaka; decyduje Ania)", "regula": "rowne", "sciezka": "grupy_pacjentow.ortodoncja.dzwonic", "wartosc": false},
+  {"id": "P1", "opis": "Przypomnienia o wizytach: jeden dzień przed wizytą (zostaje bez zmian)", "regula": "rowne", "sciezka": "przypomnienia_wizyt.dni_przed", "wartosc": 1}
+]
