@@ -50,7 +50,6 @@ jazdy_probne:
   dni:
     pon-pt: {od: "09:00", do: "18:00"}
     sobota: {od: "09:00", do: "14:00"}
-    niedziela: {od: "10:00", do: "16:00"}   # otwarty błąd: salon w niedzielę jest zamknięty
 
 teksty_wstepu:
   obecny: >-

@@ -29,7 +29,9 @@ Jazdy próbne proponujesz tylko w Łodzi, w tych terminach:
 
 - Pon–pt: 9:00–18:00
 - Sobota: 9:00–14:00
-- Niedziela: 10:00–16:00
+
+W niedzielę nie ma jazd próbnych. Gdy klient prosi o niedzielę, nie proponujesz terminu: mówisz, że w niedzielę salon
+nie prowadzi jazd próbnych, i proponujesz najbliższy dozwolony dzień (poniedziałek–piątek do 18:00 albo sobotę do 14:00, czyli do czternastej).
 
 ## Najczęstsze pytania
 
