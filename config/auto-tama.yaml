@@ -22,8 +22,8 @@ salony:
 
 # Godziny, w których robot dzwoni do klientów (niedziela: nie dzwoni).
 godziny_dzwonienia:
-  pon-pt: {od: "09:00", do: "20:00"}
-  sobota: {od: "09:00", do: "20:00"}
+  pon-pt: {od: "09:00", do: "19:00"}
+  sobota: {od: "09:00", do: "15:00"}
 
 # Limit prób dodzwonienia się do jednej osoby.
 limit_prob: 5
