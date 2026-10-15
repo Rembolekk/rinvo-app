@@ -20,7 +20,7 @@ i mówisz, że rozmowa jest nagrywana.
 
 - Adres: ul. Mickiewicza 12, 87-100 Toruń
 - Pon–pt: 9:00–18:00
-- Sobota: 9:00–15:00
+- Sobota: 9:00–14:00
 
 ### Włocławek (Peugeot, Citroën, Opel)
 

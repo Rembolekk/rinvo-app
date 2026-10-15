@@ -16,7 +16,7 @@ salony:
     adres: "ul. Bohaterów Monte Cassino 8, 81-704 Sopot"
     godziny_salonu:
       pon-czw: {od: "08:00", do: "18:00"}
-      piatek: {od: "08:00", do: "16:00"}
+      piatek: {od: "08:00", do: "18:00"}   # od października piątek do 16:00 (otwarty błąd)
 
 godziny_dzwonienia:
   pon-pt: {od: "09:00", do: "18:00"}

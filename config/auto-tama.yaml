@@ -11,7 +11,7 @@ salony:
     marki: [peugeot, citroen]
     godziny_salonu:
       pon-pt: {od: "09:00", do: "18:00"}
-      sobota: {od: "09:00", do: "15:00"}
+      sobota: {od: "09:00", do: "14:00"}   # od października salon pracuje do 15:00 (otwarty błąd)
   wloclawek:
     miasto: Włocławek
     adres: "ul. Toruńska 120, 87-800 Włocławek"   # salon przeprowadził się w sierpniu
@@ -22,8 +22,8 @@ salony:
 
 # Godziny, w których robot dzwoni do klientów (niedziela: nie dzwoni).
 godziny_dzwonienia:
-  pon-pt: {od: "09:00", do: "19:00"}
-  sobota: {od: "09:00", do: "15:00"}
+  pon-pt: {od: "09:00", do: "20:00"}
+  sobota: {od: "09:00", do: "20:00"}
 
 # Limit prób dodzwonienia się do jednej osoby.
 limit_prob: 5

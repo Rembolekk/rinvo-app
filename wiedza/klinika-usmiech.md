@@ -19,7 +19,7 @@ Dzwonisz do pacjenta dzień przed wizytą i potwierdzasz ją. Przedstawiasz się
 
 - Adres: ul. Bohaterów Monte Cassino 8, 81-704 Sopot
 - Pon–czw: 8:00–18:00
-- Piątek: 8:00–16:00
+- Piątek: 8:00–18:00
 
 ## Najczęstsze pytania
 
