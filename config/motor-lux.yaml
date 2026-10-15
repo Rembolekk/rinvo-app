@@ -1,0 +1,59 @@
+# Konfiguracja agenta głosowego: Motor-Lux (dane fikcyjne, symulacja produktu).
+# Stan odzwierciedla rzeczywistość PRZED rozmową z 15.10 i przed wykonaniem otwartych zgłoszeń.
+klient: motor-lux
+nazwa: Motor-Lux
+
+# Salony: adres i godziny salonu, które agent podaje klientom.
+salony:
+  lodz:
+    miasto: Łódź
+    adres: "ul. Pabianicka 85, 93-513 Łódź"
+    marki: [kia, hyundai]
+    godziny_salonu:
+      pon-pt: {od: "09:00", do: "18:00"}
+      sobota: {od: "09:00", do: "14:00"}
+  piotrkow:
+    miasto: Piotrków Trybunalski
+    adres: "ul. Wojska Polskiego 104, 97-300 Piotrków Trybunalski"
+    marki: [hyundai]
+    aktywny: false   # agent nie jest podpięty do tego salonu; decyduje pan Adam
+    godziny_salonu:
+      pon-pt: {od: "09:00", do: "18:00"}
+      sobota: {od: "09:00", do: "14:00"}
+
+# Godziny, w których robot dzwoni do klientów (niedziela: nie dzwoni).
+godziny_dzwonienia:
+  pon-pt: {od: "09:00", do: "18:00"}
+  sobota: {od: "09:00", do: "14:00"}
+
+# Limit prób dodzwonienia się do jednej osoby.
+limit_prob: 5
+
+# Granice platformy i umowy: konfiguracja klienta nie może ich przekraczać.
+limity:
+  godziny_dzwonienia_do: "20:00"
+  max_prob: 5
+
+marki:
+  kia: {aktywna: true}
+  hyundai: {aktywna: true}
+
+# Kampania = lista numerów, na którą dzwoni agent.
+kampanie:
+  potwierdzanie-jazd-probnych:
+    marki: [kia, hyundai]
+    status: aktywna   # tylko salon w Łodzi
+
+# Terminy jazd próbnych, które agent proponuje przy potwierdzaniu zgłoszenia.
+jazdy_probne:
+  salony: [lodz]
+  dni:
+    pon-pt: {od: "09:00", do: "18:00"}
+    sobota: {od: "09:00", do: "14:00"}
+    niedziela: {od: "10:00", do: "16:00"}   # otwarty błąd: salon w niedzielę jest zamknięty
+
+teksty_wstepu:
+  obecny: >-
+    Dzień dobry, tu wirtualna asystentka Motor-Lux. Rozmowa jest nagrywana.
+    Dzwonię w sprawie Pana zgłoszenia na jazdę próbną: czy termin, model i salon się zgadzają?
+  warianty: []
